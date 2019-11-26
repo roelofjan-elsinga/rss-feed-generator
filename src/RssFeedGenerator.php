@@ -108,7 +108,7 @@ class RssFeedGenerator
                         <title>{$item->title()}</title>
                         <link>{$this->configuration->siteUrl()}/{$item->url()}</link>
                         <description>{$item->description()}</description>
-                        <pubDate>{$item->createdAt()}</pubDate>
+                        <pubDate>{$item->createdAt()->toRfc7231String()}</pubDate>
                         <guid>{$this->configuration->siteUrl()}/{$item->url()}</guid>
                     </item>\n";
         }, $this->links);
