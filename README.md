@@ -1,11 +1,11 @@
 # RSS Feed Generator
 
-[![Build status](https://travis-ci.com/roelofjan-elsinga/atom-feed-generator.svg)](https://travis-ci.com/roelofjan-elsinga/atom-feed-generator)
-[![StyleCI Status](https://github.styleci.io/repos/202346461/shield)](https://github.styleci.io/repos/202346461)
-[![Code coverage](https://codecov.io/gh/roelofjan-elsinga/atom-feed-generator/branch/master/graph/badge.svg)](https://codecov.io/gh/roelofjan-elsinga/atom-feed-generator)
-[![Total Downloads](https://poser.pugx.org/roelofjan-elsinga/atom-feed-generator/downloads)](https://packagist.org/packages/roelofjan-elsinga/atom-feed-generator)
-[![Latest Stable Version](https://poser.pugx.org/roelofjan-elsinga/atom-feed-generator/v/stable)](https://packagist.org/packages/roelofjan-elsinga/atom-feed-generator)
-[![License](https://poser.pugx.org/roelofjan-elsinga/atom-feed-generator/license)](https://packagist.org/packages/roelofjan-elsinga/atom-feed-generator)
+[![Build status](https://travis-ci.com/roelofjan-elsinga/rss-feed-generator.svg)](https://travis-ci.com/roelofjan-elsinga/rss-feed-generator)
+[![StyleCI Status](https://github.styleci.io/repos/224125188/shield)](https://github.styleci.io/repos/224125188)
+[![Code coverage](https://codecov.io/gh/roelofjan-elsinga/rss-feed-generator/branch/master/graph/badge.svg)](https://codecov.io/gh/roelofjan-elsinga/rss-feed-generator)
+[![Total Downloads](https://poser.pugx.org/roelofjan-elsinga/rss-feed-generator/downloads)](https://packagist.org/packages/roelofjan-elsinga/rss-feed-generator)
+[![Latest Stable Version](https://poser.pugx.org/roelofjan-elsinga/rss-feed-generator/v/stable)](https://packagist.org/packages/roelofjan-elsinga/rss-feed-generator)
+[![License](https://poser.pugx.org/roelofjan-elsinga/rss-feed-generator/license)](https://packagist.org/packages/roelofjan-elsinga/rss-feed-generator)
 
 This package helps you to very easily generate an Atom Feed for your website.
 
@@ -20,23 +20,23 @@ composer require roelofjan-elsinga/rss-feed-generator
 ## Usage
 
 ```php
-use AtomFeedGenerator\AtomFeedGenerator;
+use RssFeedGenerator\RssFeedGenerator;
 
-/**@var \AtomFeedGenerator\FeedConfiguration $configuration*/
+/**@var \RssFeedGenerator\FeedConfiguration $configuration*/
 
-$generator = AtomFeedGenerator::withConfiguration($configuration);
+$generator = RssFeedGenerator::withConfiguration($configuration);
 
 // or
 
-$generator = new AtomFeedGenerator($configuration);
+$generator = new RssFeedGenerator($configuration);
 
-/**@var \AtomFeedGenerator\FeedItem $feed_item*/
+/**@var \RssFeedGenerator\FeedItem $feed_item*/
 
 $generator->add($feed_item);
 
-$atom_string = $generator->generate();
+$rss_string = $generator->generate();
 
-print $atom_string;
+print $rss_string;
 
 ```
 
