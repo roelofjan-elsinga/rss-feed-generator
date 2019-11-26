@@ -85,7 +85,7 @@ class RssFeedGenerator
     private function generateMetaInformation(): string
     {
         return "<title>{$this->configuration->title()}</title>
-                <link href=\"{$this->configuration->siteUrl()}\"/>
+                <link>{$this->configuration->siteUrl()}</link>
                 <description>{$this->configuration->description()}</description>
                 <pubDate>{$this->configuration->lastModified()->toRfc7231String()}</pubDate>
                 <lastBuildDate>{$this->configuration->lastModified()->toRfc7231String()}</lastBuildDate>

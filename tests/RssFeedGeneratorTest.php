@@ -23,7 +23,7 @@ class RssFeedGeneratorTest extends TestCase
 
         $this->assertNotFalse(strpos($feed, '<title>Test feed</title>'));
 
-        $this->assertNotFalse(strpos($feed, '<link href="https://example.com"/>'));
+        $this->assertNotFalse(strpos($feed, '<link>https://example.com</link>'));
 
         $this->assertNotFalse(strpos($feed, '<managingEditor>me@example.com (Feed Author)</managingEditor>'));
 
