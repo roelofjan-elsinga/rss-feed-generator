@@ -5,7 +5,7 @@ namespace RssFeedGenerator\Tests\Stubs;
 use RssFeedGenerator\FeedItem;
 use Carbon\Carbon;
 
-class TestFeedItem implements FeedItem
+class TestFeedItemWithImage implements FeedItem
 {
     /**
      * Get the title of the feed item.
@@ -54,6 +54,6 @@ class TestFeedItem implements FeedItem
      */
     public function image(): ?string
     {
-        return null;
+        return "https://google.com/image.jpg";
     }
 }

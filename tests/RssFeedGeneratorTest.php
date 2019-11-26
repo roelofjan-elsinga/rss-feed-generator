@@ -6,6 +6,7 @@ use RssFeedGenerator\RssFeedGenerator;
 use RssFeedGenerator\Tests\Stubs\TestFeedConfiguration;
 use RssFeedGenerator\Tests\Stubs\TestFeedItem;
 use PHPUnit\Framework\TestCase;
+use RssFeedGenerator\Tests\Stubs\TestFeedItemWithImage;
 
 class RssFeedGeneratorTest extends TestCase
 {
@@ -42,6 +43,8 @@ class RssFeedGeneratorTest extends TestCase
 
             ->add(new TestFeedItem())
 
+            ->add(new TestFeedItemWithImage())
+
             ->generate();
 
         $this->assertNotFalse(strpos($feed, '<title>Article title</title>'));
@@ -51,5 +54,7 @@ class RssFeedGeneratorTest extends TestCase
         $this->assertNotFalse(strpos($feed, '<guid>https://example.com/articles/test-article</guid>'));
 
         $this->assertNotFalse(strpos($feed, '<description>Article description</description>'));
+
+        $this->assertNotFalse(strpos($feed, '<image>https://google.com/image.jpg</image>'));
     }
 }

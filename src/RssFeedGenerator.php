@@ -104,10 +104,13 @@ class RssFeedGenerator
     private function generateLinks(): string
     {
         $entries = array_map(function (FeedItem $item): string {
+            $image_string = !empty($item->image()) ? "<image>{$item->image()}</image>" : "";
+
             return "<item>
                         <title>{$item->title()}</title>
                         <link>{$this->configuration->siteUrl()}/{$item->url()}</link>
                         <description>{$item->description()}</description>
+                        {$image_string}
                         <pubDate>{$item->createdAt()->toRfc7231String()}</pubDate>
                         <guid>{$this->configuration->siteUrl()}/{$item->url()}</guid>
                     </item>\n";

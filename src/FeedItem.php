@@ -33,4 +33,11 @@ interface FeedItem
      * @return Carbon
      */
     public function createdAt(): Carbon;
+
+    /**
+     * Get the image of the feed item
+     *
+     * @return string
+     */
+    public function image(): ?string;
 }
